@@ -5,6 +5,9 @@ describe DockingStation do
   station = DockingStation.new
   bike = Bike.new
 
+  it "has an instance variable @bikes" do
+    expect(station.bikes).to be_a Array
+  end
 
   it { is_expected.to respond_to(:release_bike) }
 
@@ -21,8 +24,3 @@ describe DockingStation do
     end
   end
 end
-
-
-
-
-# alter docking station class so release_bike returns a new instance of the bike class
